@@ -72,3 +72,33 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS Spotlight and Trash
+.Spotlight-V100
+.Trashes
+
+# macOS resource fork files
+*.swp
+*.lock
+*.tmp
+
+# Xcode project files (caso vá buildar para iOS)
+*.xcworkspace
+*.xcodeproj
+*.xcuserdata/
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+
+# Rider IDE (caso use JetBrains Rider)
+.idea/
+*.iml
+
+# VS Code settings (caso queira evitar sincronizar configs pessoais)
+.vscode/
