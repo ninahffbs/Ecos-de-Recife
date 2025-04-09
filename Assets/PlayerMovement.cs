@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     // Flip do personagem
     if (movement.x > 0)
-        transform.localScale = new Vector3(1, 1, 1); // direita
+        transform.localScale = new Vector3(3, 3, 3); // direita
     else if (movement.x < 0)
-        transform.localScale = new Vector3(-1, 1, 1); // esquerda
+        transform.localScale = new Vector3(-3, 3, 3); // esquerda
 }
 
 
