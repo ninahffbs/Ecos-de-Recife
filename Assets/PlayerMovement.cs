@@ -14,7 +14,10 @@ public class PlayerMovement : MonoBehaviour
     // Entrada do jogador
     movement.x = Input.GetAxisRaw("Horizontal");
     movement.y = Input.GetAxisRaw("Vertical");
-
+    
+    if(Input.GetKeyDown(KeyCode.Space)){
+        animator.SetTrigger("Attack");
+    }
     // Corrige pequenos valores para 0
     float speed = movement.sqrMagnitude;
     if (speed < 0.01f)
