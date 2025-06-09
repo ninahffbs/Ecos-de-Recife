@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.XR;
+using UnityEngine.XR; 
 
 public class Move_Protet : MonoBehaviour
 {
     public Transform player;
-    private float input_y;
+    private float input_y; 
     public float speed;
     private bool isChasing = false;
     [SerializeField]
@@ -19,15 +19,20 @@ public class Move_Protet : MonoBehaviour
 
     [SerializeField]
     private Animator animator;
+
     public heart_system heart;
+
+    public int damageAmount = 1;
+
     void Update()
     {
         if (isChasing)
         {
+            // Calculate direction and move
             Vector2 direcao = (player.position - transform.position).normalized;
             transform.position += (Vector3)direcao * speed * Time.deltaTime;
 
-            AtualizarDirecao(player); 
+            AtualizarDirecao(player); // updates flip and animation
         }
     }
 
@@ -48,36 +53,40 @@ public class Move_Protet : MonoBehaviour
             isChasing = false;
         }
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player")) 
         {
-            for (int i = 0; i < 1; i++)
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
             {
-                heart.vida--;
-                heart.HealthLogic();
+                playerHealth.TakeDamage(damageAmount);
             }
+
             this.animator.SetBool("movendo", false);
             PararMovimentacao();
-
         }
     }
+
     private void PararMovimentacao()
     {
         this.rb.velocity = Vector2.zero;
         this.animator.SetBool("movendo", false);
     }
+
     private void AtualizarDirecao(Transform alvo)
     {
+        if (alvo == null) return;
+
         Vector2 direcao = (alvo.position - transform.position).normalized;
         int valorX = Mathf.RoundToInt(direcao.x);
 
         if (valorX > 0)
-            spriteRenderer.flipX = true;
+            spriteRenderer.flipX = true; 
         else if (valorX < 0)
-            spriteRenderer.flipX = false;
-
+            spriteRenderer.flipX = false; 
+            
         animator.SetBool("movendo", true);
     }
 }
-

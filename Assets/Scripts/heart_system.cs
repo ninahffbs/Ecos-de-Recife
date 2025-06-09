@@ -9,27 +9,51 @@ public class heart_system : MonoBehaviour
     public bool isDead;
     public int vida;
     public int vidaMax;
+    public PlayerHealth playerHealth;
+
     PLayer_Controller playerAnimator;
+
     public Image[] coracao;
     public Sprite cheio;
     public Sprite vazio;
-    // Start is called before the first frame update
+
+    void Awake()
+    {
+        if (playerHealth == null)
+        {
+            playerHealth = GetComponent<PlayerHealth>();
+            if (playerHealth == null)
+            {
+                Debug.LogError("HeartSystem: PlayerHealth component not found on this GameObject or assigned in Inspector!");
+            }
+        }
+        isDead = false;
+    }
+
     void Start()
     {
         playerAnimator = GetComponent<PLayer_Controller>();
+        if (playerHealth != null)
+        {
+            vida = playerHealth.currentHealth;
+            vidaMax = playerHealth.maxHealth;
+        }
+        HealthLogic();
     }
-    // Update is called once per frame
+
     void Update()
     {
         HealthLogic();
         DeadState();
     }
+
     public void HealthLogic()
     {
         if(vida > vidaMax)
         {
             vida = vidaMax;
         }
+
         for (int i = 0; i < coracao.Length; i++)
         {
             if(i < vida)
@@ -49,24 +73,40 @@ public class heart_system : MonoBehaviour
             }
         }
     }
+
     void DeadState()
     {
-        if(vida <= 0 )
+        if(vida <= 0 && !isDead)
         {
-            isDead = true;
+            isDead = true; 
+            Debug.Log("Player has died. Initiating Game Over sequence.");
 
-            playerAnimator.playerAnimator.SetBool("isDead", isDead);
-            GetComponent<PLayer_Controller>().enabled = false;
-            Destroy(gameObject, 2f);
+            if (playerAnimator != null && playerAnimator.playerAnimator != null)
+            {
+                playerAnimator.playerAnimator.SetBool("isDead", true);
+            }
+
+            if (GetComponent<PLayer_Controller>() != null)
+            {
+                GetComponent<PLayer_Controller>().enabled = false;
+            }
             StartCoroutine(LoadSceneAfterDelay(1.5f));
         }
     }
+
     void OnDestroy()
     {
-        playerAnimator.playerAnimator.SetBool("isDead", isDead);
-        GetComponent<PLayer_Controller>().enabled = false;
-        
+        Debug.Log("Player GameObject OnDestroy called.");
+        if (playerAnimator != null && playerAnimator.playerAnimator != null)
+        {
+             playerAnimator.playerAnimator.SetBool("isDead", true);
+        }
+        if (GetComponent<PLayer_Controller>() != null)
+        {
+            GetComponent<PLayer_Controller>().enabled = false;
+        }
     }
+
     private IEnumerator LoadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);

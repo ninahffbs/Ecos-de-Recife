@@ -485,6 +485,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 260492587}
   animator: {fileID: 260492586}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &260492584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1123,7 @@ GameObject:
   - component: {fileID: 510492022}
   - component: {fileID: 510492021}
   - component: {fileID: 510492023}
+  - component: {fileID: 510492024}
   m_Layer: 0
   m_Name: chico lama
   m_TagString: Player
@@ -1334,7 +1336,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDead: 0
   vida: 0
-  vidaMax: 0
+  vidaMax: 3
+  playerHealth: {fileID: 0}
   coracao: []
   cheio: {fileID: 0}
   vazio: {fileID: 0}
@@ -1353,6 +1356,21 @@ MonoBehaviour:
   firepoint: {fileID: 0}
   lama1Prefab: {fileID: 0}
   bulletforce: 20
+--- !u!114 &510492024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510492014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bab691e07a56442886ed58526b31cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 3
+  heartSystem: {fileID: 510492022}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,6 +1695,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 579474286}
   animator: {fileID: 579474285}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &579474283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,6 +2192,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 611251667}
   animator: {fileID: 611251666}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &611251664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,6 +2782,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 751682610}
   animator: {fileID: 751682609}
   heart: {fileID: 0}
+  damageAmount: 1
 --- !u!114 &751682607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3303,6 +3324,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 938521134}
   animator: {fileID: 938521131}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!212 &938521134
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3715,6 +3737,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1066583280}
   animator: {fileID: 1066583279}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1066583277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4613,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1207181804}
   animator: {fileID: 1207181803}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1207181801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4840,6 +4864,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1213438467}
   animator: {fileID: 1213438466}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1213438464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5338,6 +5363,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1419705526}
   animator: {fileID: 1419705525}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1419705523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5588,6 +5614,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1452135768}
   animator: {fileID: 1452135767}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1452135765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6333,6 +6360,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1674192710}
   animator: {fileID: 1674192709}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1674192707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6681,6 +6709,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1725942939}
   animator: {fileID: 1725942938}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!50 &1725942937
 Rigidbody2D:
   serializedVersion: 4
@@ -7146,6 +7175,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1812040759}
   animator: {fileID: 1812040758}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1812040756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7640,6 +7670,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1896186438}
   animator: {fileID: 1896186437}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &1896186435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8151,6 +8182,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2048476265}
   animator: {fileID: 2048476264}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!61 &2048476271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8352,6 +8384,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2127009442}
   animator: {fileID: 2127009441}
   heart: {fileID: 510492022}
+  damageAmount: 1
 --- !u!114 &2127009439
 MonoBehaviour:
   m_ObjectHideFlags: 0
