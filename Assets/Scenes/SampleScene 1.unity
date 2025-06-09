@@ -1168,7 +1168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6e56441ed9b487fbca572f41b60293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  walkSpeed: 5
+  sprintSpeed: 7
   rb: {fileID: 510492015}
   animator: {fileID: 510492017}
 --- !u!95 &510492017
@@ -1254,7 +1255,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14.1369, y: -2.1718, z: 0}
-  m_LocalScale: {x: 2.6924999, y: 2.326561, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
