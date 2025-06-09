@@ -20,39 +20,26 @@ public class Move_Protet : MonoBehaviour
     [SerializeField]
     private Animator animator;
     public heart_system heart;
-    // Start is called before the first frame update
-    
-
-    // Update is called once per frame
     void Update()
     {
-        if(isChasing == true)
+        if (isChasing)
         {
             Vector2 direcao = (player.position - transform.position).normalized;
             transform.position += (Vector3)direcao * speed * Time.deltaTime;
+
+            AtualizarDirecao(player); 
         }
     }
-    private void OnTriggerStay2D(Collider2D collider)
-    {
-        if(collider.CompareTag("Player"))
-        {
-            Vector2 PosicaoAtual = this.transform.position;
-            Vector2 PosicaoPlayer = collider.transform.position;
 
-            Vector2 direcao = (PosicaoPlayer - PosicaoAtual).normalized;
-            int valorX = Mathf.RoundToInt(direcao.x);
-            if (valorX > 0)
-            {
-                this.spriteRenderer.flipX = true;
-            }
-            else if (valorX < 0)
-            {
-                this.spriteRenderer.flipX = false;
-            }
-            this.animator.SetBool("movendo", true);
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            AtualizarDirecao(collider.transform);
             isChasing = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
@@ -63,16 +50,16 @@ public class Move_Protet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            for(int i = 0; i < 1; i++)
+            for (int i = 0; i < 1; i++)
             {
                 heart.vida--;
                 heart.HealthLogic();
             }
             this.animator.SetBool("movendo", false);
             PararMovimentacao();
-            
+
         }
     }
     private void PararMovimentacao()
@@ -80,4 +67,17 @@ public class Move_Protet : MonoBehaviour
         this.rb.velocity = Vector2.zero;
         this.animator.SetBool("movendo", false);
     }
+    private void AtualizarDirecao(Transform alvo)
+    {
+        Vector2 direcao = (alvo.position - transform.position).normalized;
+        int valorX = Mathf.RoundToInt(direcao.x);
+
+        if (valorX > 0)
+            spriteRenderer.flipX = true;
+        else if (valorX < 0)
+            spriteRenderer.flipX = false;
+
+        animator.SetBool("movendo", true);
+    }
 }
+

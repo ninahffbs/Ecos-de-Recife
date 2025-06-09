@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 260492587}
@@ -1124,7 +1124,7 @@ GameObject:
   - component: {fileID: 510492023}
   m_Layer: 0
   m_Name: chico lama
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1484,7 +1484,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.4359045, y: -0.08446002, z: -10}
+  m_LocalPosition: {x: -11.102577, y: -0.08383989, z: -10}
   m_LocalScale: {x: 0.013342825, y: 0.013342825, z: 0.013342825}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1670,7 +1670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 579474286}
@@ -2166,7 +2166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 611251667}
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 751682610}
@@ -3645,7 +3645,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.009992257, y: -0.16986872}
@@ -3708,7 +3708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1066583280}
@@ -4583,7 +4583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1207181804}
@@ -4833,7 +4833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1213438467}
@@ -5331,7 +5331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1419705526}
@@ -5581,7 +5581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1452135768}
@@ -6326,7 +6326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1674192710}
@@ -6674,7 +6674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1725942939}
@@ -7139,7 +7139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1812040759}
@@ -7633,7 +7633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 1896186438}
@@ -8224,7 +8224,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.009992257, y: -0.16986872}
@@ -8345,7 +8345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97dfcbbb32faf8343b54f0912eefdf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 510492019}
   speed: 1.5
   rb: {fileID: 0}
   spriteRenderer: {fileID: 2127009442}
