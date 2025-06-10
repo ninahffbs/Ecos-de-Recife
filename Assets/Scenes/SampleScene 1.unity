@@ -1335,12 +1335,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDead: 0
-  vida: 0
-  vidaMax: 3
-  playerHealth: {fileID: 0}
-  coracao: []
-  cheio: {fileID: 0}
-  vazio: {fileID: 0}
+  vida: 6
+  vidaMax: 6
+  playerHealth: {fileID: 510492024}
+  coracao:
+  - {fileID: 619754546}
+  - {fileID: 1102567385}
+  - {fileID: 1893439667}
+  cheio: {fileID: 21300000, guid: d4bd76bba79c9194588d5312855c3165, type: 3}
+  vazio: {fileID: 21300000, guid: 4a4b4d44cef5134479fd2b6a085d706c, type: 3}
 --- !u!114 &510492023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,8 +1371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94bab691e07a56442886ed58526b31cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 3
+  currentHealth: 6
+  maxHealth: 6
   heartSystem: {fileID: 510492022}
 --- !u!1 &519420028
 GameObject:
@@ -2965,7 +2968,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2982,7 +2985,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 0.1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4219,7 +4222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 335, y: 180}
+  m_AnchoredPosition: {x: 339, y: 234.81}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143097394
@@ -4305,7 +4308,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 15.636421, w: 0}
+  m_margin: {x: 0, y: -0.00000007342918, z: 15.636421, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6948,10 +6951,10 @@ RectTransform:
   - {fileID: 492085073}
   m_Father: {fileID: 759855680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: 150}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100.00003, y: -50}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771213373
 MonoBehaviour:
